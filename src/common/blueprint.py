@@ -1,4 +1,4 @@
-from src.test.bp import TestBlueprint
+from src.myapp.bp import TestBlueprint
 
 blueprints = []
 blueprints.append(TestBlueprint())

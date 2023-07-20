@@ -5,9 +5,13 @@ from flask_middleware import Middleware
 from flask_migrate import Migrate
 from src.common.blueprint import blueprints
 from src.common.models import models_list
+from flask_cors import CORS
 
 def create_app():
     app = Flask(__name__)
+
+    #Cors config
+    CORS(app, resources={r"/*": {"origins": "*"}})
 
     #Config
     config = Config()
